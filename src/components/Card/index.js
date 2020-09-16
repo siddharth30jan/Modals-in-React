@@ -19,7 +19,7 @@ const Card = ({ data }) => {
           border: "1px solid black",
         }}
       >
-        ${data.PlanName}K
+        {data.PlanName}
       </div>
 
       <div

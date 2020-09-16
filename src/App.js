@@ -66,16 +66,6 @@ const data = [
     FinalPackagePrice: 3679,
   },
   {
-    id: 6,
-    AverageHomePricePoint: "200-300",
-    PlanName: "Qualified 40",
-    QualifiedLeadsPerMonth: 40,
-    PricePerLiveTransfer: 77,
-    TotalQualifiedLeadPrice: 3080,
-    TotalPlatformPrice: 599,
-    FinalPackagePrice: 3679,
-  },
-  {
     id: 7,
     AverageHomePricePoint: "200-300",
     PlanName: "Qualified 60",
@@ -220,7 +210,7 @@ function App() {
   const [priceRange, setPriceRange] = useState(1);
   const [items, setItems] = useState([]);
 
-  useEffect(() => {
+  const extractRequired = () => {
     let temp;
     if (priceRange === 1) temp = "100-200";
     else if (priceRange === 2) temp = "200-300";
@@ -233,12 +223,32 @@ function App() {
       (ele) => ele.AverageHomePricePoint === temp
     );
     setItems(requiredItems);
+  };
+
+  useEffect(() => {
+    /*let temp;
+    if (priceRange === 1) temp = "100-200";
+    else if (priceRange === 2) temp = "200-300";
+    else if (priceRange === 3) temp = "300-400";
+    else if (priceRange === 4) temp = "400-500";
+    else temp = "500";
+
+    //filter out necessary elements
+    const requiredItems = data.filter(
+      (ele) => ele.AverageHomePricePoint === temp
+    );
+    setItems(requiredItems);**/
+    extractRequired();
   }, []);
+
+  useEffect(() => {
+    extractRequired();
+  }, [priceRange]);
 
   //console.log(items);
   return (
     <>
-      <Navbar />
+      <Navbar setPriceRange={setPriceRange} />
       <div
         style={{
           display: "flex",

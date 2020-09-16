@@ -5,8 +5,9 @@ const divStyle = {
   margin: "5px",
   padding: "2px",
   border: "1px solid black",
+  cursor: "pointer",
 };
-const Nav = () => {
+const Nav = ({ setPriceRange }) => {
   return (
     <div
       style={{
@@ -16,11 +17,21 @@ const Nav = () => {
         justifyContent: "space-around",
       }}
     >
-      <div style={divStyle}>$100K-200K</div>
-      <div style={divStyle}>$200K-300K</div>
-      <div style={divStyle}>$300K-400K</div>
-      <div style={divStyle}>$400K-500K</div>
-      <div style={divStyle}>$500K+</div>
+      <div style={divStyle} onClick={(e) => setPriceRange(1)}>
+        $100K-200K
+      </div>
+      <div style={divStyle} onClick={(e) => setPriceRange(2)}>
+        $200K-300K
+      </div>
+      <div style={divStyle} onClick={(e) => setPriceRange(3)}>
+        $300K-400K
+      </div>
+      <div style={divStyle} onClick={(e) => setPriceRange(4)}>
+        $400K-500K
+      </div>
+      <div style={divStyle} onClick={(e) => setPriceRange(5)}>
+        $500K+
+      </div>
     </div>
   );
 };
