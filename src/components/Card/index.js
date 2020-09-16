@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import Form from "../Form";
 
 const divStyle = {
   width: "20%",
@@ -8,69 +9,76 @@ const divStyle = {
 };
 const Card = ({ data }) => {
   console.log(data);
-  return (
-    <div style={{ width: "200px", height: "100px" }}>
-      <div
-        style={{
-          width: "100%",
-          height: "50px",
-          backgroundColor: "blue",
-          alignItems: "center",
-          border: "1px solid black",
-        }}
-      >
-        {data.PlanName}
-      </div>
+  const [isForm, setForm] = useState(false);
 
-      <div
-        style={{
-          width: "100%",
-          height: "50px",
-          borderBottom: "2px dotted grey",
-          alignItems: "center",
-        }}
-      >
-        ${data.PricePerLiveTransfer}K Per Qualification Lead
-      </div>
-      <div
-        style={{
-          width: "100%",
-          height: "50px",
-          borderBottom: "2px dotted grey",
-          alignItems: "center",
-        }}
-      >
-        Qualified Leads Per Month ${data.QualifiedLeadsPerMonth}K
-      </div>
-      <div
-        style={{
-          width: "100%",
-          height: "50px",
-          borderBottom: "2px dotted grey",
-          alignItems: "center",
-        }}
-      >
-        Platform Fee Per Month ${data.TotalPlatformPrice}K
-      </div>
-      <div
-        style={{
-          width: "100%",
-          height: "50px",
-          backgroundColor: "blue",
-          alignItems: "center",
-        }}
-      >
-        ${data.FinalPackagePrice}/month
-      </div>
-      <div
-        style={{
-          width: "100%",
-          height: "50px",
-          border: "solid 1px orange",
-          alignItems: "center",
-        }}
-      >
-        Start your trial
+  return (
+    <div>
+      {isForm ? <Form data={data.PlanName} /> : null}
+      <div style={{ width: "200px", height: "100px" }}>
+        <div
+          style={{
+            width: "100%",
+            height: "50px",
+            backgroundColor: "blue",
+            alignItems: "center",
+            border: "1px solid black",
+          }}
+        >
+          {data.PlanName}
+        </div>
+
+        <div
+          style={{
+            width: "100%",
+            height: "50px",
+            borderBottom: "2px dotted grey",
+            alignItems: "center",
+          }}
+        >
+          ${data.PricePerLiveTransfer}K Per Qualification Lead
+        </div>
+        <div
+          style={{
+            width: "100%",
+            height: "50px",
+            borderBottom: "2px dotted grey",
+            alignItems: "center",
+          }}
+        >
+          Qualified Leads Per Month ${data.QualifiedLeadsPerMonth}K
+        </div>
+        <div
+          style={{
+            width: "100%",
+            height: "50px",
+            borderBottom: "2px dotted grey",
+            alignItems: "center",
+          }}
+        >
+          Platform Fee Per Month ${data.TotalPlatformPrice}K
+        </div>
+        <div
+          style={{
+            width: "100%",
+            height: "50px",
+            backgroundColor: "blue",
+            alignItems: "center",
+          }}
+        >
+          ${data.FinalPackagePrice}/month
+        </div>
+        <div
+          style={{
+            width: "100%",
+            height: "50px",
+            border: "solid 1px orange",
+            alignItems: "center",
+            cursor: "pointer",
+          }}
+          onClick={(e) => setForm(true)}
+        >
+          Start your trial
+        </div>
       </div>
     </div>
   );
