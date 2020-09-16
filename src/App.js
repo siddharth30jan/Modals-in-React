@@ -9,7 +9,7 @@ import Form from "./components/Form";
 const data = [
   {
     id: 1,
-    AverageHomePricePoint: "100-200",
+    AverageHomePricePoint: "$100K-$200K",
     PlanName: "Qualified 20",
     QualifiedLeadsPerMonth: 20,
     PricePerLiveTransfer: 69,
@@ -19,7 +19,7 @@ const data = [
   },
   {
     id: 2,
-    AverageHomePricePoint: "100-200",
+    AverageHomePricePoint: "$100K-$200K",
     PlanName: "Qualified 40",
     QualifiedLeadsPerMonth: 40,
     PricePerLiveTransfer: 67,
@@ -29,7 +29,7 @@ const data = [
   },
   {
     id: 3,
-    AverageHomePricePoint: "100-200",
+    AverageHomePricePoint: "$100K-$200K",
     PlanName: "Qualified 60",
     QualifiedLeadsPerMonth: 60,
     PricePerLiveTransfer: 65,
@@ -39,7 +39,7 @@ const data = [
   },
   {
     id: 4,
-    AverageHomePricePoint: "100-200",
+    AverageHomePricePoint: "$100K-$200K",
     PlanName: "Qualified 80",
     QualifiedLeadsPerMonth: 80,
     PricePerLiveTransfer: 63,
@@ -49,7 +49,7 @@ const data = [
   },
   {
     id: 5,
-    AverageHomePricePoint: "200-300",
+    AverageHomePricePoint: "$200K-$300K",
     PlanName: "Qualified 20",
     QualifiedLeadsPerMonth: 20,
     PricePerLiveTransfer: 79,
@@ -59,7 +59,7 @@ const data = [
   },
   {
     id: 6,
-    AverageHomePricePoint: "200-300",
+    AverageHomePricePoint: "$200K-$300K",
     PlanName: "Qualified 40",
     QualifiedLeadsPerMonth: 40,
     PricePerLiveTransfer: 77,
@@ -69,7 +69,7 @@ const data = [
   },
   {
     id: 7,
-    AverageHomePricePoint: "200-300",
+    AverageHomePricePoint: "$200K-$300K",
     PlanName: "Qualified 60",
     QualifiedLeadsPerMonth: 60,
     PricePerLiveTransfer: 74,
@@ -79,7 +79,7 @@ const data = [
   },
   {
     id: 8,
-    AverageHomePricePoint: "200-300",
+    AverageHomePricePoint: "$200K-$300K",
     PlanName: "Qualified 80",
     QualifiedLeadsPerMonth: 80,
     PricePerLiveTransfer: 72,
@@ -89,7 +89,7 @@ const data = [
   },
   {
     id: 9,
-    AverageHomePricePoint: "300-400",
+    AverageHomePricePoint: "$300K-$400K",
     PlanName: "Qualified 20",
     QualifiedLeadsPerMonth: 20,
     PricePerLiveTransfer: 99,
@@ -99,7 +99,7 @@ const data = [
   },
   {
     id: 10,
-    AverageHomePricePoint: "300-400",
+    AverageHomePricePoint: "$300K-$400K",
     PlanName: "Qualified 40",
     QualifiedLeadsPerMonth: 40,
     PricePerLiveTransfer: 96,
@@ -109,7 +109,7 @@ const data = [
   },
   {
     id: 11,
-    AverageHomePricePoint: "300-400",
+    AverageHomePricePoint: "$300K-$400K",
     PlanName: "Qualified 60",
     QualifiedLeadsPerMonth: 60,
     PricePerLiveTransfer: 93,
@@ -119,7 +119,7 @@ const data = [
   },
   {
     id: 12,
-    AverageHomePricePoint: "300-400",
+    AverageHomePricePoint: "$300K-$400K",
     PlanName: "Qualified 80",
     QualifiedLeadsPerMonth: 80,
     PricePerLiveTransfer: 90,
@@ -129,7 +129,7 @@ const data = [
   },
   {
     id: 13,
-    AverageHomePricePoint: "400-500",
+    AverageHomePricePoint: "$400K-$500K",
     PlanName: "Qualified 20",
     QualifiedLeadsPerMonth: 20,
     PricePerLiveTransfer: 109,
@@ -139,7 +139,7 @@ const data = [
   },
   {
     id: 14,
-    AverageHomePricePoint: "400-500",
+    AverageHomePricePoint: "$400K-$500K",
     PlanName: "Qualified 40",
     QualifiedLeadsPerMonth: 40,
     PricePerLiveTransfer: 106,
@@ -149,7 +149,7 @@ const data = [
   },
   {
     id: 15,
-    AverageHomePricePoint: "400-500",
+    AverageHomePricePoint: "$400K-$500K",
     PlanName: "Qualified 60",
     QualifiedLeadsPerMonth: 60,
     PricePerLiveTransfer: 102,
@@ -159,7 +159,7 @@ const data = [
   },
   {
     id: 16,
-    AverageHomePricePoint: "400-500",
+    AverageHomePricePoint: "$400K-$500K",
     PlanName: "Qualified 80",
     QualifiedLeadsPerMonth: 80,
     PricePerLiveTransfer: 99,
@@ -169,7 +169,7 @@ const data = [
   },
   {
     id: 17,
-    AverageHomePricePoint: "500",
+    AverageHomePricePoint: "$500K+",
     PlanName: "Qualified 20",
     QualifiedLeadsPerMonth: 20,
     PricePerLiveTransfer: 129,
@@ -179,7 +179,7 @@ const data = [
   },
   {
     id: 18,
-    AverageHomePricePoint: "500",
+    AverageHomePricePoint: "$500K+",
     PlanName: "Qualified 40",
     QualifiedLeadsPerMonth: 40,
     PricePerLiveTransfer: 125,
@@ -189,7 +189,7 @@ const data = [
   },
   {
     id: 19,
-    AverageHomePricePoint: "500",
+    AverageHomePricePoint: "$500K+",
     PlanName: "Qualified 60",
     QualifiedLeadsPerMonth: 60,
     PricePerLiveTransfer: 121,
@@ -199,7 +199,7 @@ const data = [
   },
   {
     id: 20,
-    AverageHomePricePoint: "500",
+    AverageHomePricePoint: "$500K+",
     PlanName: "Qualified 80",
     QualifiedLeadsPerMonth: 80,
     PricePerLiveTransfer: 117,
@@ -215,11 +215,11 @@ function App() {
   const [planName, setPlanName] = useState("");
   const extractRequired = () => {
     let temp;
-    if (priceRange === 1) temp = "100-200";
-    else if (priceRange === 2) temp = "200-300";
-    else if (priceRange === 3) temp = "300-400";
-    else if (priceRange === 4) temp = "400-500";
-    else temp = "500";
+    if (priceRange === 1) temp = "$100K-$200K";
+    else if (priceRange === 2) temp = "$200K-$300K";
+    else if (priceRange === 3) temp = "$300K-$400K";
+    else if (priceRange === 4) temp = "$400K-$500K";
+    else temp = "$500K+";
 
     //filter out necessary elements
     const requiredItems = data.filter(

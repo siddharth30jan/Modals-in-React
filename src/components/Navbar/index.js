@@ -29,16 +29,16 @@ const Nav = ({ priceRange, setPriceRange }) => {
       }}
     >
       <div style={divStyle1} onClick={(e) => setPriceRange(1)}>
-        $100K-200K
+        $100K-$200K
       </div>
       <div style={divStyle2} onClick={(e) => setPriceRange(2)}>
-        $200K-300K
+        $200K-$300K
       </div>
       <div style={divStyle3} onClick={(e) => setPriceRange(3)}>
-        $300K-400K
+        $300K-$400K
       </div>
       <div style={divStyle4} onClick={(e) => setPriceRange(4)}>
-        $400K-500K
+        $400K-$500K
       </div>
       <div style={divStyle5} onClick={(e) => setPriceRange(5)}>
         $500K+
