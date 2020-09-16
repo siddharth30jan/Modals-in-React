@@ -7,6 +7,7 @@ const divStyle = {
   border: "1px solid black",
 };
 const Card = ({ data }) => {
+  console.log(data);
   return (
     <div style={{ width: "200px", height: "100px" }}>
       <div
@@ -18,7 +19,7 @@ const Card = ({ data }) => {
           border: "1px solid black",
         }}
       >
-        {data.planName}{" "}
+        ${data.PlanName}K
       </div>
 
       <div
@@ -29,8 +30,7 @@ const Card = ({ data }) => {
           alignItems: "center",
         }}
       >
-        {pricePerLivetransfer}
-        Per Qualification Lead
+        ${data.PricePerLiveTransfer}K Per Qualification Lead
       </div>
       <div
         style={{
@@ -40,8 +40,7 @@ const Card = ({ data }) => {
           alignItems: "center",
         }}
       >
-        Qualified Leads Per Month
-        {data.qualifiedLeadPerMonth}
+        Qualified Leads Per Month ${data.QualifiedLeadsPerMonth}K
       </div>
       <div
         style={{
@@ -51,8 +50,7 @@ const Card = ({ data }) => {
           alignItems: "center",
         }}
       >
-        Platform Fee Per Month
-        {data.totalPlatformPrice}
+        Platform Fee Per Month ${data.TotalPlatformPrice}K
       </div>
       <div
         style={{
@@ -62,7 +60,7 @@ const Card = ({ data }) => {
           alignItems: "center",
         }}
       >
-        ${data.finalPackagePrice}/month
+        ${data.FinalPackagePrice}/month
       </div>
       <div
         style={{
