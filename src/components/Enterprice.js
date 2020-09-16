@@ -5,9 +5,9 @@ const divStyle = {
   padding: "2px",
   border: "1px solid black",
 };
-const Enterprice = ({ data, setForm }) => {
+const Enterprice = ({ data, setForm, setPlanName }) => {
   return (
-    <div style={{ width: "20%" }}>
+    <div style={{ width: "200px" }}>
       <div
         style={{
           width: "100%",
@@ -28,8 +28,12 @@ const Enterprice = ({ data, setForm }) => {
             border: "solid 1px orange",
             alignItems: "center",
             cursor: "pointer",
+            marginTop: "100px",
           }}
-          onClick={(e) => setForm(true)}
+          onClick={(e) => {
+            setForm(true);
+            setPlanName("");
+          }}
         >
           Get In Touch
         </div>

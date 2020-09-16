@@ -209,7 +209,7 @@ const data = [
   },
 ];
 function App() {
-  const [priceRange, setPriceRange] = useState(1);
+  const [priceRange, setPriceRange] = useState(3);
   const [items, setItems] = useState([]);
   const [isForm, setForm] = useState(false);
   const [planName, setPlanName] = useState("");
@@ -251,7 +251,7 @@ function App() {
   //console.log(items);
   return (
     <>
-      <Navbar setPriceRange={setPriceRange} />
+      <Navbar priceRange={priceRange} setPriceRange={setPriceRange} />
       <div
         style={{
           display: "flex",
@@ -261,9 +261,15 @@ function App() {
       >
         {isForm ? <Form data={planName} setForm={setForm} /> : null}
         {items.map((ele) => (
-          <Card key={ele.id} data={ele} isForm={isForm} setForm={setForm} setPlanName={setPlanName}/>
+          <Card
+            key={ele.id}
+            data={ele}
+            isForm={isForm}
+            setForm={setForm}
+            setPlanName={setPlanName}
+          />
         ))}
-        {/*<Enterprice data={""} setForm={setForm} /> */}
+        {<Enterprice data={""} setPlanName={setPlanName} setForm={setForm} />}
       </div>
     </>
   );
