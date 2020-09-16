@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Form from "../Form";
 
 const divStyle = {
   width: "20%",
@@ -7,13 +6,11 @@ const divStyle = {
   padding: "2px",
   border: "1px solid black",
 };
-const Card = ({ data }) => {
+const Card = ({ data, isForm, setForm, setPlanName }) => {
   console.log(data);
-  const [isForm, setForm] = useState(false);
 
   return (
     <div>
-      {isForm ? <Form data={data.PlanName} /> : null}
       <div style={{ width: "200px", height: "100px" }}>
         <div
           style={{
@@ -75,7 +72,10 @@ const Card = ({ data }) => {
             alignItems: "center",
             cursor: "pointer",
           }}
-          onClick={(e) => setForm(true)}
+          onClick={(e) => {
+            setPlanName(data.PlanName);
+            setForm(true);
+          }}
         >
           Start your trial
         </div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Form = ({ data }) => {
+const Form = ({ data, setForm }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -36,7 +36,16 @@ const Form = ({ data }) => {
         width: "500px",
       }}
     >
-      <h1>Get Started with SquadVoice</h1>
+      <div style={{ display: "flex" }}>
+        <h1 style={{ flex: 2 }}>Get Started with SquadVoice</h1>
+        <button
+          style={{ flex: 1, height: "2px", cursor: "pointer" }}
+          onClick={(e) => setForm(false)}
+        >
+          {" "}
+          CLOSE{" "}
+        </button>
+      </div>
       <div style={{ margin: "10px", padding: "5px" }}>
         Plan Selected: {data}{" "}
       </div>

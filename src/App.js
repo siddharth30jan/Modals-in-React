@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Card from "./components/Card";
+import Enterprice from "./components/Enterprice";
+import Form from "./components/Form";
 
 const data = [
   {
@@ -209,7 +211,8 @@ const data = [
 function App() {
   const [priceRange, setPriceRange] = useState(1);
   const [items, setItems] = useState([]);
-
+  const [isForm, setForm] = useState(false);
+  const [planName, setPlanName] = useState("");
   const extractRequired = () => {
     let temp;
     if (priceRange === 1) temp = "100-200";
@@ -256,9 +259,11 @@ function App() {
           marginTop: "100px",
         }}
       >
+        {isForm ? <Form data={planName} setForm={setForm} /> : null}
         {items.map((ele) => (
-          <Card key={ele.id} data={ele} />
+          <Card key={ele.id} data={ele} isForm={isForm} setForm={setForm} setPlanName={setPlanName}/>
         ))}
+        {/*<Enterprice data={""} setForm={setForm} /> */}
       </div>
     </>
   );
