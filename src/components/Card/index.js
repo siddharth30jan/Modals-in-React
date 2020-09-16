@@ -7,7 +7,7 @@ const divStyle = {
   border: "1px solid black",
 };
 const Card = ({ data, isForm, setForm, setPlanName }) => {
-  console.log(data);
+  // console.log(data);
 
   return (
     <div>
@@ -42,7 +42,7 @@ const Card = ({ data, isForm, setForm, setPlanName }) => {
             alignItems: "center",
           }}
         >
-          Qualified Leads Per Month ${data.QualifiedLeadsPerMonth}K
+          Qualified Leads Per Month {data.QualifiedLeadsPerMonth}
         </div>
         <div
           style={{
