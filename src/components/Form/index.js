@@ -31,18 +31,40 @@ const Form = ({ data }) => {
   };
 
   return (
-    <div style={{ width: "500px" }}>
+    <div
+      style={{
+        width: "500px",
+      }}
+    >
       <h1>Get Started with SquadVoice</h1>
-      <div>Plan Selected: {data} </div>
-      <div>
+      <div style={{ margin: "10px", padding: "5px" }}>
+        Plan Selected: {data}{" "}
+      </div>
+      <div
+        style={{
+          width: "100%",
+          margin: "auto",
+          padding: "5px",
+          alignItems: "center",
+        }}
+      >
         <h2> Name </h2>
         <input
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
+          style={{ width: "100%" }}
         />
       </div>
-      <div>
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          margin: "auto",
+          padding: "5px",
+          justifyContent: "space-between",
+        }}
+      >
         <div>
           <h2>Email</h2>
           <input
@@ -60,7 +82,16 @@ const Form = ({ data }) => {
           />
         </div>
       </div>
-      <div>
+
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          margin: "auto",
+          padding: "5px",
+          justifyContent: "space-between",
+        }}
+      >
         <div>
           <h2>Number of Leads you generate in a month</h2>
           <input
@@ -78,7 +109,15 @@ const Form = ({ data }) => {
           />
         </div>
       </div>
-      <div>
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          margin: "auto",
+          padding: "5px",
+          justifyContent: "space-between",
+        }}
+      >
         <div>
           <h2>Which CRM do you use</h2>
           <input
@@ -96,9 +135,24 @@ const Form = ({ data }) => {
           />
         </div>
       </div>
-      <div>
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          margin: "auto",
+          padding: "5px",
+          justifyContent: "space-between",
+          flexDirection: "column",
+        }}
+      >
         <h2>What are your biggest lead sources?</h2>
-        <div>
+        <div
+          style={{
+            marginTop: "5px",
+            display: "flex",
+            justifyContent: "space-between",
+          }}
+        >
           <input
             type="checkbox"
             checked={leadSources === "Zillow"}
@@ -125,9 +179,24 @@ const Form = ({ data }) => {
           Others
         </div>
       </div>
-      <div>
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          margin: "auto",
+          padding: "5px",
+          justifyContent: "space-between",
+          flexDirection: "column",
+        }}
+      >
         <h2>Where did you hear about us?</h2>
-        <div>
+        <div
+          style={{
+            marginTop: "5px",
+            display: "flex",
+            justifyContent: "space-between",
+          }}
+        >
           <input
             type="checkbox"
             checked={hear === "Google"}
@@ -160,7 +229,18 @@ const Form = ({ data }) => {
           Real Closures
         </div>
       </div>
-      <button onClick={XYZ}>Submit</button>
+      <button
+        style={{
+          width: "40%",
+          backgroundColor: "orange",
+          cursor: "pointer",
+          border: "1px solid black",
+          marginTop: "5px",
+        }}
+        onClick={XYZ}
+      >
+        Submit
+      </button>
     </div>
   );
 };
