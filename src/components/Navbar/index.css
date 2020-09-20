@@ -1,0 +1,27 @@
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.box {
+  margin-top: 20px;
+  background-color: grey;
+  color: darkblue;
+  flex: 1;
+  border: gray 2px solid;
+  border-radius: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.box:hover {
+  background-color: lightblue;
+  color: white;
+}

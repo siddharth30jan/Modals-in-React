@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { BsArrowBarDown } from "react-icons/bs";
 const Form = ({ data, setForm }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -48,17 +48,23 @@ const Form = ({ data, setForm }) => {
   return (
     <div
       style={{
-        width: "auto",
+        width: "80%",
+        margin: "auto",
       }}
     >
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
         <h1 style={{ flex: 2 }}>Get Started with SquadVoice</h1>
         <button
-          style={{ flex: 1, height: "2px", cursor: "pointer" }}
+          style={{
+            flex: 1,
+            height: "2px",
+            cursor: "pointer",
+            display: "flex",
+            justifyContent: "flex-end",
+          }}
           onClick={(e) => setForm(false)}
         >
-          {" "}
-          CLOSE{" "}
+          <BsArrowBarDown size="3rem" />
         </button>
       </div>
       <div style={{ margin: "10px", padding: "5px" }}>
@@ -68,7 +74,6 @@ const Form = ({ data, setForm }) => {
         <div
           style={{
             width: "100%",
-            margin: "auto",
             padding: "5px",
             alignItems: "center",
           }}
@@ -112,22 +117,24 @@ const Form = ({ data, setForm }) => {
           style={{
             width: "100%",
             display: "flex",
-            margin: "auto",
             padding: "5px",
             justifyContent: "space-between",
+            alignItems: "center",
           }}
         >
-          <div>
-            <h2>Number of Leads you generate in a month</h2>
+          <div style={{ flex: "1", marginRight: "15px" }}>
+            <h5>Number of Leads you generate in a month</h5>
             <input
+              style={{ width: "100%" }}
               type="number"
               value={leadsInMonth}
               onChange={(e) => setLeadsInMonth(e.target.value)}
             />
           </div>
-          <div>
-            <h2>Total leads in your CRM</h2>
+          <div style={{ flex: "1" }}>
+            <h5>Total leads in your CRM</h5>
             <input
+              style={{ width: "100%" }}
               type="number"
               value={totalLeadsCRM}
               onChange={(e) => setTotalLeadsCRM(e.target.value)}
@@ -144,7 +151,7 @@ const Form = ({ data, setForm }) => {
           }}
         >
           <div>
-            <h2>Which CRM do you use</h2>
+            <h5>Which CRM do you use</h5>
             <input
               type="number"
               value={CRM}
@@ -152,7 +159,7 @@ const Form = ({ data, setForm }) => {
             />
           </div>
           <div>
-            <h2>No. of Agents</h2>
+            <h5>No. of Agents</h5>
             <input
               type="number"
               value={agents}
@@ -170,7 +177,7 @@ const Form = ({ data, setForm }) => {
             flexDirection: "column",
           }}
         >
-          <h2>What are your biggest lead sources?</h2>
+          <h5>What are your biggest lead sources?</h5>
           <div
             style={{
               marginTop: "5px",
@@ -208,25 +215,26 @@ const Form = ({ data, setForm }) => {
           style={{
             width: "100%",
             display: "flex",
-            margin: "auto",
             padding: "5px",
             justifyContent: "space-between",
             flexDirection: "column",
           }}
         >
-          <h2>Where did you hear about us?</h2>
+          <h5>Where did you hear about us?</h5>
           <div
             style={{
+              width: "100%",
               marginTop: "5px",
               display: "flex",
               justifyContent: "space-between",
+              alignItems: "center",
             }}
           >
             <input
               type="checkbox"
               checked={hear === "Google"}
               onChange={(e) => setHear("Google")}
-            />{" "}
+            />
             Google
             <input
               type="checkbox"
@@ -251,19 +259,30 @@ const Form = ({ data, setForm }) => {
               checked={hear === "Real Closures"}
               onChange={(e) => setHear("Real Closures")}
             />{" "}
-            Real Closures
+            Closures
           </div>
         </div>
-        <input
-          type="submit"
+        <div
           style={{
-            width: "40%",
-            backgroundColor: "orange",
-            cursor: "pointer",
-            border: "1px solid black",
-            marginTop: "5px",
+            display: "flex",
+            justifyContent: "center",
+            margin: "5px 0px",
           }}
-        />
+        >
+          <button
+            style={{
+              width: "40%",
+              margin: "auto",
+              backgroundColor: "orange",
+              cursor: "pointer",
+              border: "1px solid black",
+              padding: "5px",
+              marginTop: "5px",
+            }}
+          >
+            Submit
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -1,84 +1,31 @@
 import React, { useState } from "react";
+import "./index.css";
 
-const divStyle = {
-  width: "20%",
-  margin: "5px",
-  padding: "2px",
-  border: "1px solid black",
-};
 const Card = ({ data, isForm, setForm, setPlanName }) => {
   // console.log(data);
 
   return (
-    <div>
-      <div style={{ width: "200px", height: "100px" }}>
-        <div
-          style={{
-            width: "100%",
-            height: "50px",
-            backgroundColor: "blue",
-            alignItems: "center",
-            border: "1px solid black",
-          }}
-        >
-          {data.PlanName}
-        </div>
+    <div className="container1">
+      <div className="A">{data.PlanName}</div>
 
-        <div
-          style={{
-            width: "100%",
-            height: "50px",
-            borderBottom: "2px dotted grey",
-            alignItems: "center",
-          }}
-        >
-          ${data.PricePerLiveTransfer}K Per Qualification Lead
-        </div>
-        <div
-          style={{
-            width: "100%",
-            height: "50px",
-            borderBottom: "2px dotted grey",
-            alignItems: "center",
-          }}
-        >
-          Qualified Leads Per Month {data.QualifiedLeadsPerMonth}
-        </div>
-        <div
-          style={{
-            width: "100%",
-            height: "50px",
-            borderBottom: "2px dotted grey",
-            alignItems: "center",
-          }}
-        >
-          Platform Fee Per Month ${data.TotalPlatformPrice}K
-        </div>
-        <div
-          style={{
-            width: "100%",
-            height: "50px",
-            backgroundColor: "blue",
-            alignItems: "center",
-          }}
-        >
-          ${data.FinalPackagePrice}/month
-        </div>
-        <div
-          style={{
-            width: "100%",
-            height: "50px",
-            border: "solid 1px orange",
-            alignItems: "center",
-            cursor: "pointer",
-          }}
-          onClick={(e) => {
-            setPlanName(data.PlanName);
-            setForm(true);
-          }}
-        >
-          Start your trial
-        </div>
+      <div className="B">
+        ${data.PricePerLiveTransfer}K Per Qualification Lead
+      </div>
+      <div className="C">
+        Qualified Leads Per Month {data.QualifiedLeadsPerMonth}
+      </div>
+      <div className="D">
+        Platform Fee Per Month ${data.TotalPlatformPrice}K
+      </div>
+      <div className="E">${data.FinalPackagePrice}/month</div>
+      <div
+        className="F"
+        onClick={(e) => {
+          setPlanName(data.PlanName);
+          setForm(true);
+        }}
+      >
+        Start your trial
       </div>
     </div>
   );

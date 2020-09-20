@@ -3,3 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+.App {
+  height: 100vh;
+  background-color: rgba(21, 127, 233, 0.7);
+}
